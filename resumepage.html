@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Download</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #1e2b19, #1c2a1e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 120px;
+      padding: 20px;
+      justify-content: center;
+      width: fit-content;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      width: 360px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .card:nth-child(1) {
+      animation: slideInFromLeft 2s ease-out;
+    }
+
+    .card:nth-child(2) {
+      animation: slideInFromRight 2s ease-out;
+    }
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromRight {
+      0% {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .card h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #22ff55;
+      color: black;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn i {
+      margin-right: 8px;
+    }
+
+    .download-btn:hover {
+      background: #1ed747;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Want to see my resume as IT Professional?</h2>
+      <p>
+        Click on the button below to download my Resume for Development, IT and Programming roles.
+      </p>
+      <a href="Resume.pdf" class="download-btn">
+        <i class="fas fa-download"></i> Download my Dev Resume
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>Want to see my resume as a Data Analyst?</h2>
+      <p>
+        Click on the button below to download my Resume for the above role.
+      </p>
+      <a href="Resume.pdf" class="download-btn">
+        <i class="fas fa-download"></i> Download my DA Resume
+      </a>
+    </div>
+  </div>
+</body>
+</html>
